@@ -1,17 +1,20 @@
 package com.mkurfeyiz.ecommerce_web.model;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 import javax.persistence.*;
 
 @Entity
+@DynamicUpdate
 @Table(name = "users")
 public class Users {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "firstName")
+    @Column(name = "first_name")
     private String fname;
-    @Column(name = "lastName")
+    @Column(name = "last_name")
     private String lname;
     @Column(name = "phone")
     private String phone;
