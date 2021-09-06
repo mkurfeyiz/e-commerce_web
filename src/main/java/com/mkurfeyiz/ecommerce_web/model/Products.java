@@ -3,24 +3,24 @@ package com.mkurfeyiz.ecommerce_web.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "products")
+@Table(name="products")
 public class Products {
     @Id
-    @Column(name = "ID")
+    @Column(name="ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "Name")
+    @Column(name="Name")
     private String name;
-    @Column(name = "Price")
-    private double price;
-    @Column(name = "Gender")
+    @Column(name="Price")
+    private String price;
+    @Column(name="Gender")
     private String gender;
-    @Column(name = "Category")
+    @Column(name="Category")
     private String category;
-    @Column(name = "Brand")
+    @Column(name="Brand")
     private String brand;
 
-    public Products(int id, String name, double price, String gender, String category, String brand) {
+    public Products(int id, String name, String price, String gender, String category, String brand) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -49,11 +49,11 @@ public class Products {
         this.name = name;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
